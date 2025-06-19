@@ -4,10 +4,10 @@ module top_module (
     input data,
     output start_shifting);
     parameter [2:0]  IDLE = 0,
-					 S0 = 1,
-					 S1 = 2,
-					 S2 = 3,
-					 S3 = 4;
+		     S0 = 1,
+	             S1 = 2,
+	             S2 = 3,
+		     S3 = 4;
 
 	reg [2:0] state, n;
 
