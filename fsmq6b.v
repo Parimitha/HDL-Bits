@@ -12,7 +12,7 @@ module top_module (
                 C: ns=(w)?D:E;
                 D: ns=(w)?A:F;
                 E: ns=(~w)?E:D;
-                F: ns=(~w)?D:C;
+                F: ns=(w)?D:C;
                 default: ns=3'b000;
             endcase
         end
