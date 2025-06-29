@@ -1,0 +1,16 @@
+module top_module(
+	input clk, 
+	input load, 
+	input [9:0] data, 
+	output tc
+);
+    reg [9:0]count;
+    always@(posedge clk)
+        begin
+            if(load)
+                count<=data;
+            else 
+                count<=(count==10'b0)?count:count-1;
+        end
+    assign tc=(count==10'd0)?1'b1:1'b0;
+endmodule
